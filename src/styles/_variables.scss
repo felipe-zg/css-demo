@@ -1,0 +1,11 @@
+$color-bg-primary: #111827;
+$color-accent: rgb(198, 7, 7);
+$color-text-primary: #ffffff;
+$color-text-muted: rgba(255, 255, 255, 0.7);
+
+$timeline-line: linear-gradient(
+  to bottom,
+  transparent,
+  $color-accent,
+  transparent
+);
