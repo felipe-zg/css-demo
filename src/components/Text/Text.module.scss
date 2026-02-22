@@ -1,0 +1,53 @@
+.text {
+  margin: 0;
+}
+
+.default {
+  font-family: inherit;
+}
+
+.betania {
+  font-family: $font-betania;
+}
+
+.japanese {
+  font-family: $font-japanese;
+}
+
+.primary {
+  color: $color-text-primary;
+}
+
+.accent {
+  color: $color-accent;
+}
+
+.small {
+  font-size: $font-size-small;
+}
+
+.medium {
+  font-size: $font-size-medium;
+}
+
+.large {
+  font-size: $font-size-large;
+}
+
+.heading {
+  font-size: $font-size-heading;
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
