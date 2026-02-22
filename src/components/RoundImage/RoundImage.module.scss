@@ -1,0 +1,22 @@
+.roundImage {
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1;
+}
+
+.withBorder {
+  border: 3px solid $color-accent;
+}
+
+.small {
+  width: 50px;
+}
+
+.medium {
+  width: 80px;
+}
+
+.large {
+  width: 100px;
+}
