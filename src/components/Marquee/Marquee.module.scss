@@ -1,0 +1,60 @@
+.marquee {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: $color-accent;
+  margin-top: auto;
+  padding: 0.5rem 0;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    $color-black 10%,
+    $color-black 90%,
+    transparent
+  );
+}
+
+.marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+  will-change: transform;
+  padding-right: 1em;
+}
+
+.group {
+  display: flex;
+  flex: 0 0 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
