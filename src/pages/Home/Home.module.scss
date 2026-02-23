@@ -1,0 +1,120 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  min-width: 100%;
+  --square-size: 160vmax;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+
+  width: var(--square-size);
+  height: var(--square-size);
+  bottom: calc(var(--square-size) / -2);
+  left: 50%;
+  z-index: -1;
+
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+  background: 
+    radial-gradient(circle at 30% 50%, rgba($color-accent, 0.5), transparent 60%),
+    radial-gradient(circle at 70% 50%, rgba($color-accent, 0.4), transparent 60%),
+    linear-gradient($color-accent, transparent);
+  background-size: 200% 200%;
+  animation: 
+    rollSquare 1s ease forwards, 
+    wave 6s ease-in-out infinite alternate;
+}
+
+@keyframes rollSquare {
+  to {
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main {
+  padding: 2rem 4rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.link {
+  color: $color-text-primary;
+  font-size: $font-size-medium;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.content {
+  width: 50vw;
+  margin-top: 8rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.introduction {
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .home {
+    --square-size: 220vmax;
+  }
+}

@@ -1,0 +1,33 @@
+import styles from "./Home.module.scss";
+import { RoundImage, Text } from "../../components";
+
+const Home: React.FC = () => {
+  return (
+    <div className={styles.home}>
+      <div className={styles.main}>
+        <div className={styles.header}>
+          <RoundImage src="/images/hero.jpeg" alt="Home Icon"  size="large" />
+          <div className={styles.info}>
+            <Text as="h3" variant="heading-lg" font="betania">Felipe Zeba</Text>
+            <Text as="p" variant="body-sm" font="japanese">フロントエンドソフトウェアエンジニア</Text>
+          </div>
+        </div>
+        <div className={styles.content}>
+          <Text as="p" variant="heading-xl" font="japanese" className={styles.introduction}>
+            ユーザー体験とパフォーマンスを重視したフロントエンドエンジニア
+          </Text>
+          <div className={styles.links}>
+            <a href="https://github.com/felipezeba" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              GitHub &#10548;
+            </a>
+            <a href="https://www.linkedin.com/in/felipezeba/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              LinkedIn &#10548;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
