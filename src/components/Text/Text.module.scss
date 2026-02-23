@@ -34,9 +34,28 @@
   font-size: $font-size-large;
 }
 
-.heading {
-  font-size: $font-size-heading;
-  margin-bottom: 4rem;
+.headingExtraSmall {
+  font-size: $font-size-heading-extra-small;
+  font-weight: bold;
+}
+
+.headingSmall {
+  font-size: $font-size-heading-small;
+  font-weight: bold;
+}
+
+.headingMedium {
+  font-size: $font-size-heading-medium;
+  font-weight: bold;
+}
+
+.headingLarge {
+  font-size: $font-size-heading-large;
+  font-weight: bold;
+}
+
+.headingExtraLarge {
+  font-size: $font-size-heading-extra-large;
   font-weight: bold;
 }
 

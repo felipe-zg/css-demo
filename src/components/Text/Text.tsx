@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 type Font = "default" | "betania" | "japanese";
 type Color = "primary" | "accent";
-type Variant = "body-sm" | "body-md" | "body-lg" | "heading-xl";
+type Variant = "body-sm" | "body-md" | "body-lg" | "heading-xs" | "heading-sm" | "heading-md" | "heading-lg" | "heading-xl";
 type Align = "left" | "center" | "right";
 
 type TextProps<T extends React.ElementType> = {
@@ -31,7 +31,11 @@ const variantClasses: Record<Variant, string> = {
   "body-sm": styles.small,
   "body-md": styles.medium,
   "body-lg": styles.large,
-  "heading-xl": styles.heading,
+  "heading-xs": styles.headingExtraSmall,
+  "heading-sm": styles.headingSmall,
+  "heading-md": styles.headingMedium,
+  "heading-lg": styles.headingLarge,
+  "heading-xl": styles.headingExtraLarge,
 };
 
 const alignClasses: Record<Align, string> = {
