@@ -24,7 +24,7 @@ const Timeline = () => {
 
   return (
     <section className={styles.timelineSection}>
-      <Text as="h1" font="japanese" variant="heading-xl" align="center">
+      <Text as="h1" font="japanese" variant="heading-xl" align="center" className={styles.title}>
         経歴
       </Text>
 
