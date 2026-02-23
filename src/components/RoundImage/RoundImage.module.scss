@@ -20,3 +20,17 @@
 .large {
   width: 100px;
 }
+
+@media (max-width: 980px) {
+  .small {
+    width: 40px;
+  }
+
+  .medium {
+    width: 50px;
+  }
+
+  .large {
+    width: 60px;
+  }
+}
