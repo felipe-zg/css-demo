@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss";
-import { RoundImage, Text } from "../../components";
-import { githubLink, linkedinLink } from "../../consts";
+import { Marquee, RoundImage, Text } from "../../components";
+import { githubLink, linkedinLink, skills } from "../../consts";
 
 const Home: React.FC = () => {
   return (
@@ -27,6 +27,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+      <Marquee items={skills} />
     </div>
   );
 };
