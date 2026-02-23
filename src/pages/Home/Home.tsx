@@ -1,5 +1,6 @@
 import styles from "./Home.module.scss";
 import { RoundImage, Text } from "../../components";
+import { githubLink, linkedinLink } from "../../consts";
 
 const Home: React.FC = () => {
   return (
@@ -17,10 +18,10 @@ const Home: React.FC = () => {
             ユーザー体験とパフォーマンスを重視したフロントエンドエンジニア
           </Text>
           <div className={styles.links}>
-            <a href="https://github.com/felipezeba" target="_blank" rel="noopener noreferrer" className={styles.link}>
+            <a href={githubLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
               GitHub &#10548;
             </a>
-            <a href="https://www.linkedin.com/in/felipezeba/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+            <a href={linkedinLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
               LinkedIn &#10548;
             </a>
           </div>
