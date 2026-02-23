@@ -2,6 +2,7 @@
   margin: 0;
 }
 
+/* Font Families */
 .default {
   font-family: inherit;
 }
@@ -14,6 +15,7 @@
   font-family: $font-japanese;
 }
 
+/* Colors */
 .primary {
   color: $color-text-primary;
 }
@@ -22,6 +24,20 @@
   color: $color-accent;
 }
 
+/* Text Alignment */
+.alignCenter {
+  text-align: center;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+/* Font Sizes */
 .small {
   font-size: $font-size-small;
 }
@@ -59,14 +75,36 @@
   font-weight: bold;
 }
 
-.alignCenter {
-  text-align: center;
-}
+@media (max-width: 980px) {
+  .small {
+    font-size: $mobile-font-size-small;
+  }
 
-.alignLeft {
-  text-align: left;
-}
+  .medium {
+    font-size: $mobile-font-size-medium;
+  }
 
-.alignRight {
-  text-align: right;
+  .large {
+    font-size: $mobile-font-size-large;
+  }
+
+  .headingExtraSmall {
+    font-size: $mobile-font-size-heading-extra-small;
+  }
+
+  .headingSmall {
+    font-size: $mobile-font-size-heading-small;
+  }
+
+  .headingMedium {
+    font-size: $mobile-font-size-heading-medium;
+  }
+
+  .headingLarge {
+    font-size: $mobile-font-size-heading-large;
+  }
+
+  .headingExtraLarge {
+    font-size: $mobile-font-size-heading-extra-large;
+  }
 }
