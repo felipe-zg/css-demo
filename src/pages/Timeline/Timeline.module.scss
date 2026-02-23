@@ -1,5 +1,14 @@
-.title {
-  margin-bottom: 2rem;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    scale: 0.5;
+    transform: translateY(40px)
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+  }
 }
 
 .timelineSection {
@@ -7,6 +16,11 @@
   color: $color-text-primary;
   min-height: 100vh;
   min-height: 100dvh;
+  margin-bottom: 16rem; //TODO: remove whennext section is implemented
+}
+
+.title {
+  margin-bottom: 2rem;
 }
 
 .timeline {
@@ -37,14 +51,9 @@
   width: 100%;
   display: flex;
   margin-bottom: 4rem;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
 }
 
 .left {

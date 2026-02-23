@@ -1,26 +1,8 @@
-import { useEffect, useRef } from "react";
 import styles from "./Timeline.module.scss";
 import { timelineItems } from "../../consts";
 import { RoundImage, Text } from "../../components";
 
 const Timeline = () => {
-  const itemsRef = useRef<HTMLDivElement[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle(styles.visible,entry.isIntersecting);
-        });
-      },{ threshold: 0.3, root: null }
-    );
-
-    itemsRef.current.forEach((el) => {
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section className={styles.timelineSection}>
@@ -32,9 +14,6 @@ const Timeline = () => {
         {timelineItems.map((item, index) => (
           <div
             key={index}
-            ref={(el) => {
-              if (el) itemsRef.current[index] = el;
-            }}
             className={`${styles.item} ${
               index % 2 === 0 ? styles.left : styles.right
             }`}
