@@ -1,0 +1,16 @@
+export const skills: string[] = [
+  "React",
+  "Redux",
+  "React native",
+  "TypeScript",
+  "JavaScript",
+  "C#",
+  "HTML",
+  "CSS",
+  "Sass",
+  "Webpack",
+  "GraphQL",
+  "Jest",
+  "Git",
+  "Agile Methodologies",
+];
