@@ -18,12 +18,16 @@ const Home: React.FC = () => {
             ユーザー体験とパフォーマンスを重視したフロントエンドエンジニア
           </Text>
           <div className={styles.links}>
-            <a href={githubLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              GitHub &#10548;
-            </a>
-            <a href={linkedinLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              LinkedIn &#10548;
-            </a>
+            <Text as="p" variant="body-md">
+              <a href={githubLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                GitHub &#8663;
+              </a>
+            </Text>
+            <Text as="p" variant="body-md">
+              <a href={linkedinLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                LinkedIn &#8663;
+              </a>
+            </Text>
           </div>
         </div>
       </div>

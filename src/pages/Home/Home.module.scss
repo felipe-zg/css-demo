@@ -68,12 +68,10 @@
 .links {
   display: flex;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .link {
-  color: $color-text-primary;
-  font-size: $font-size-medium;
   transition: color 0.3s ease;
 
   &:hover {
@@ -116,5 +114,14 @@
 @media (max-width: 1200px) {
   .home {
     --square-size: 220vmax;
+  }
+
+  .content {
+    width: 100%;
+    margin-top: 6rem;
+  }
+
+  .main {
+    padding: 2rem;
   }
 }
