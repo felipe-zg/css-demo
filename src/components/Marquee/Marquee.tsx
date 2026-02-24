@@ -1,12 +1,8 @@
+import Text from "../Text/Text";
 import styles from "./Marquee.module.scss";
 
-interface Skill {
-  name: string;
-  image: string;
-}
-
 interface MarqueeProps {
-  items: Skill[];
+  items: string[];
 }
 
 const Marquee: React.FC<MarqueeProps> = ({ items }) => {
@@ -16,12 +12,8 @@ const Marquee: React.FC<MarqueeProps> = ({ items }) => {
     <div className={styles.wrapper}>
       <div className={styles.track}>
         {duplicated.map((item, index) => (
-          <div className={styles.item} key={`${item.name}-${index}`}>
-            <img
-              src={item.image}
-              alt={item.name}
-              className={styles.image}
-            />
+          <div className={styles.item} key={`${item}-${index}`}>
+            <Text as="p">{item}</Text>
           </div>
         ))}
       </div>

@@ -4,6 +4,7 @@
   margin-top:auto;
   overflow: hidden;
   position: relative;
+  background-color: $color-accent;
 
   mask-image: linear-gradient(
     to right,
@@ -21,15 +22,11 @@
 }
 
 .item {
-  flex: 0 0 200px;
-  height: 100px;
-
+  flex: 0 0 180px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-color: $color-accent;
-  border-radius: 6px;
   margin-right: 1rem;
 }
 
