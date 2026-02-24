@@ -1,34 +1,30 @@
 import styles from "./Marquee.module.scss";
 
+interface Skill {
+  name: string;
+  image: string;
+}
+
 interface MarqueeProps {
-  items: string[];
+  items: Skill[];
 }
-
-interface TrackProps {
-  items: string[];
-  ariaHidden?: boolean;
-}
-
-const Track: React.FC<TrackProps> = ({ items, ariaHidden = false }) => {
-  return (
-    <div aria-hidden={ariaHidden} className={styles.track}>
-        {items.map((item, index) => (
-          <div className={styles.group}>
-            <span key={`a-${index}`} className={styles.item}>
-              {item}
-            </span>
-          </div>
-        ))}
-    </div>
-  );
-};
 
 const Marquee: React.FC<MarqueeProps> = ({ items }) => {
+  const duplicated = [...items, ...items];
+
   return (
-    <div className={styles.marquee}>
-      <Track items={items} />
-      <Track items={items} ariaHidden={true} />
-      <Track items={items} ariaHidden={true} />
+    <div className={styles.wrapper}>
+      <div className={styles.track}>
+        {duplicated.map((item, index) => (
+          <div className={styles.item} key={`${item.name}-${index}`}>
+            <img
+              src={item.image}
+              alt={item.name}
+              className={styles.image}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
